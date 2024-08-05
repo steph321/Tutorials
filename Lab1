@@ -1,0 +1,17 @@
+import ballerina/io;
+
+public function main() {
+    io:println("Enter the first number: ");
+    string firstInput = io:readln();
+
+    int firstNumber = checkpanic int:fromString(firstInput);
+
+    io:println("Enter the second number: ");
+    string secondInput = io:readln();
+
+    int secondNumber = checkpanic int:fromString(secondInput);
+
+    int sum = firstNumber + secondNumber;
+
+    io:print("The sum of the two numbers is: ", sum.toString());
+}
